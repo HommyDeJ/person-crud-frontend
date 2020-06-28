@@ -1,10 +1,9 @@
 {
-  "name": "pokedex",
+  "name": "front-end",
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start:prod": "node server.js",
-    "postinstall": "ng build --output-path dist/heroku-test",
+    "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
@@ -12,11 +11,11 @@
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "~9.1.7",
     "@angular/cli": "~9.1.6",
+    "@angular/compiler-cli": "~9.1.7",
+    "@angular/animations": "~9.1.7",
     "@angular/common": "~9.1.7",
     "@angular/compiler": "~9.1.7",
-    "@angular/compiler-cli": "~9.1.7",
     "@angular/core": "~9.1.7",
     "@angular/forms": "~9.1.7",
     "@angular/platform-browser": "~9.1.7",
@@ -24,26 +23,19 @@
     "@angular/router": "~9.1.7",
     "bootstrap": "^4.5.0",
     "express": "^4.17.1",
-    "express-path": "^0.3.8",
-    "jquery": "^3.5.1",
     "rxjs": "~6.5.4",
     "tslib": "^1.10.0",
-    "typescript": "~3.8.3",
-    "zone.js": "~0.10.2"
-  },
-  "engines": {
-    "node": "v12.16.3",
-    "npm": "6.14.4"
+    "zone.js": "~0.10.2",
+    "typescript": "~3.8.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.901.6",
     "@angular/cli": "~9.1.6",
     "@angular/compiler-cli": "~9.1.7",
+    "@types/node": "^12.11.1",
     "@types/jasmine": "~3.5.0",
     "@types/jasminewd2": "~2.0.3",
-    "@types/node": "^12.11.1",
     "codelyzer": "^5.1.2",
-    "enhanced-resolve": "^3.3.0",
     "jasmine-core": "~3.5.0",
     "jasmine-spec-reporter": "~4.2.1",
     "karma": "~5.0.0",
