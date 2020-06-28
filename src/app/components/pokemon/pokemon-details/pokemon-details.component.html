@@ -1,0 +1,51 @@
+<div *ngIf="pokemon" class="container">
+
+    <h1 class="my-4">
+        {{ pokemon?.name | titlecase }}<small>{{ (pokemon?.id > 10 ? '#0' : '#00' ) + pokemon?.id }}</small>
+    </h1>
+
+    <div class="row">
+        <div class="col-md-3 col-sm-6 mb-4">
+            <img width="100" [src]="pokemon.sprites.front_default">
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <img width="100" [src]="pokemon.sprites.back_default">
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <img width="100" [src]="pokemon.sprites.front_shiny">
+        </div>
+
+        <div class="col-md-3 col-sm-6 mb-4">
+            <img width="100" [src]="pokemon.sprites.back_shiny">
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-4">
+            <h3 class="my-3">Tipos</h3>
+            <ul *ngFor="let pokeTypes of pokemon?.types">
+                <li>{{pokeTypes.type?.name}}</li>
+            </ul>
+
+            <h3 class="my-3">Habilidades</h3>
+            <ul *ngFor="let pokeAbilities of pokemon?.abilities">
+                <li>{{pokeAbilities?.ability.name}}</li>
+            </ul>
+        </div>
+
+        <div class="col-md-4">
+            <h3 class="my-3">Características</h3>
+            <ul>
+                <li><span>Tamaño:</span> {{ pokemon?.height }} FT</li>
+                <li><span>Peso:</span> {{ pokemon?.weight }} LBS</li>
+            </ul>
+
+            <h3 class="my-3">Movimientos</h3>
+            <ul *ngFor="let pokeMoves of pokemon.moves | slice:0:5">
+                <li>{{pokeMoves?.move.name}}</li>
+            </ul>
+        </div>
+    </div>
+</div>

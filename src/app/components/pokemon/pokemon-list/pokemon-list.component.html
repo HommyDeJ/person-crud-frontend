@@ -1,0 +1,20 @@
+<section class="our-webcoderskull padding-lg">
+    <div class="container">     
+        <div class="col-md-4">
+            <h5>Pokemon list</h5>
+            <input class="form-control" type="text" [(ngModel)]="query">
+        </div>
+        <br/>
+        <ul class="row">
+            <li class="col-12 col-md-6 col-lg-3" *ngFor="let item of pokemon | search: query">
+                <div class="cnt-block equal-hight" style="height: 349px;" [routerLink]="['/detail', item?.name]">
+                    <figure><img [src]="item?.imageFront" alt="pokeimage" class="img-responsive"></figure>
+                    <h3>{{ item?.name }}</h3>
+                </div>
+            </li>
+        </ul>
+        <div class="container-button">
+            <button class="button-style" (click)="onSubmit()">Load More</button>
+        </div>
+    </div>
+</section>
