@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start:prod": "node server.js",
-    "postinstall": "ng build --output-path dist/heroku-test",
+    "postinstall": "ng build --output-path dist/person-crud-frontend",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",

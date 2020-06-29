@@ -1,7 +1,7 @@
 import { Person } from '../../models/person';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from "@angular/router";
-import { ApiService } from './../../service/api.service';
+import { ApiService } from './../../services/api.service';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
 

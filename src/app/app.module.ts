@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { PersonCreateComponent } from './components/person-create/person-create.component';
 import { PersonEditComponent } from './components/person-edit/person-edit.component';
 import { PersonListComponent } from './components/person-list/person-list.component';
-import { ApiService } from './service/api.service';
+import { ApiService } from './services/api.service';
 
 @NgModule({
   declarations: [

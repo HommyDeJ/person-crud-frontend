@@ -1,5 +1,5 @@
 import { Router } from '@angular/router';
-import { ApiService } from './../../service/api.service';
+import { ApiService } from './../../services/api.service';
 import { Component, OnInit, NgZone } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from "@angular/forms";
 
@@ -42,7 +42,7 @@ export class PersonCreateComponent implements OnInit {
       this.apiService.createPerson(this.personForm.value).subscribe(
         (res) => {
           console.log('Person successfully created!')
-          this.ngZone.run(() => this.router.navigateByUrl('/person-list'))
+          this.ngZone.run(() => this.router.navigateByUrl('/persons-list'))
         }, (error) => {
           console.log(error);
         });
