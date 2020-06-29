@@ -10,7 +10,8 @@ import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http
 export class ApiService {
   
   baseUri:string = 'https://person-crud-newtech-api.herokuapp.com';
-  headers = new HttpHeaders().set('Content-Type', 'application/json');
+  headers = new HttpHeaders().set('Content-Type', 'application/json',)
+                             .set('Access-Control-Allow-Origin', '*');
 
   constructor(private http: HttpClient) { }
 
